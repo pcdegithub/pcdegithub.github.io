@@ -125,7 +125,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/05/04/learngit/git_diff.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/05/04/learngit/gitlog.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/05/04/learngit/reflog_log.PNG">
-<meta property="og:updated_time" content="2019-05-04T14:29:47.555Z">
+<meta property="og:updated_time" content="2019-05-04T14:32:24.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="learngit">
 <meta name="twitter:description" content="温习一下git 一、基本命令 git init&amp;nbsp;&amp;nbsp;初始化仓库，在本地创建一个仓库，.git记载了版本等信息.  git add file&amp;nbsp;&amp;nbsp;file就是要add的文件名，都是同样的做法，将文件放到暂存区（缓存区），然后一次性提交 git add file1; git add file2;git commit -m “一次性提交”  git commit -m">
@@ -426,7 +426,7 @@
                 
               
 
-              <time title="创建时间：2019-05-04 15:37:00 / 修改时间：14:29:47" itemprop="dateCreated datePublished" datetime="2019-05-04T15:37:00Z">2019-05-04</time>
+              <time title="创建时间：2019-05-04 15:37:00 / 修改时间：14:32:24" itemprop="dateCreated datePublished" datetime="2019-05-04T15:37:00Z">2019-05-04</time>
             
 
             
@@ -501,11 +501,11 @@
 <li>git reset –HEAD(这里的写法:HEAD^,HEAD^^,HEAD^^^,或者HEAD~100) HEAD^回退到上一个版本，HEAD^^回退到上上个版本……<br>回退之后工作区内容就彻底变了。</li>
 <li>git log查看历史纪录，每个历史纪录在git中叫做commit,相当于快照<br><img src="/2019/05/04/learngit/gitlog.PNG" alt="将提交暂存区" title="not staged to commit">图片中的每条记录名称叫commit，后面是commit的id号，用来回退，之需要输入前几个，git自动识别后面的。Head就是当前版本，指针总是指向head,<br>开始回退：  </li>
 <li>git reset –hard HEAD^ 回退到上一个版本。用git log查看历史纪录，回退之前的版本的记录就没有了。HEAD^这种写法只能回退，不能从过去返回到现在。这时需要commit id了。<br>git reset –hard commitid 只需要写前几位。<br>这个commitid因为查看不到历史纪录，只能用另一个命令</li>
-<li>git reflog查看命令历史，以便确定要回到未来的哪个版本。<br>git log可以查看提交历史,只能看到当前版本之前的历史纪录，以便确定要回退到哪个版本。</li>
-</ul>
+<li><p>git reflog查看命令历史，以便确定要回到未来的哪个版本。<br>git log可以查看提交历史,只能看到当前版本之前的历史纪录，以便确定要回退到哪个版本。</p>
 <p><strong><em>不管处在什么阶段 ，只要git reset 都直接回退到那个版本，工作区处于无状态即git status查看只会看到nothing to commit, working tree clean</em></strong></p>
+</li>
+</ul>
 <p>无论git log ,git reflog查看历史纪录，每个版本动作操作都记录下了，包括回退。从上到下是最近操作到过去操作<br><img src="/2019/05/04/learngit/reflog_log.PNG" alt="历史纪录" title="log_flog">  </p>
-<hr>
 <hr>
 <h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><p>默认工作区是不包含.git文件夹的，默认的状态，没有修改处于<br>没有对工作区做任何修改，那么工作区就是“干净”<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure></p>
 <p>工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。<br>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。<br>创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。<br>需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</p>

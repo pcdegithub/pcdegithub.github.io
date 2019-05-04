@@ -1107,7 +1107,7 @@ pre .javascript .function {
   position: relative;
   display: inline-block;
   padding: 0 40px;
-  color: #fff;
+  color: #ffb6c1 !important;
   background: #222;
   border-bottom: none;
 }
@@ -1784,7 +1784,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #388226;
+  background: #59ff52;
 }
 .feed-link,
 .chat {
@@ -2458,6 +2458,10 @@ embed {
   .menu {
     text-align: left;
   }
+}
+.menu .menu-item a {
+  font-size: 20px;
+  color: #fd00ff;
 }
 .menu-item-active a,
 .menu .menu-item a:hover,

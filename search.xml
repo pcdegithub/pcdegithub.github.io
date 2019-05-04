@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[Hexo几个命令]]></title>
-    <url>%2Fhello-world.html%2F</url>
+    <url>%2F2019%2F12%2F01%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Create a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy]]></content>
       <categories>
         <category>博客</category>
@@ -10,5 +10,10 @@
       <tags>
         <tag>hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[learngit]]></title>
+    <url>%2F2019%2F05%2F04%2Flearngit%2F</url>
+    <content type="text"><![CDATA[温习一下git git init&nbsp;&nbsp;初始化仓库，在本地创建一个仓库，.git记载了版本等信息. git add file&nbsp;&nbsp;file就是要add的文件名，都是同样的做法，将文件放到暂存区（缓存区），然后一次性提交 git add file1; git add file2;git commit -m “一次性提交” git commit -m “description”&nbsp;&nbsp;-m一定要写，方便以后回退查看历史 git status&nbsp;&nbsp;查看仓库的目前状态。如果仓库来了个新人（创建一个文件），实习期，并没有转正，没交入职材料，没签合同，没录入公司员工管理系统。这时处于未跟踪状态。]]></content>
   </entry>
 </search>

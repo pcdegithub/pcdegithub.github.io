@@ -1784,7 +1784,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #655dff;
+  background: #ffc247;
 }
 .feed-link,
 .chat {
@@ -2563,4 +2563,10 @@ body #footer > div > div {
   background: #fff;
   opacity: 0.8;
   min-height: 500px;
+}
+.main-inner .site-author-name {
+  font-family: monospace;
+}
+.main-inner .site-description.motion-element {
+  color: #507126;
 }

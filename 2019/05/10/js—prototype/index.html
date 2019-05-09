@@ -110,18 +110,18 @@
 
 
 
-  <meta name="description" content="远程仓库 搭建github就不说了，进入(仓库主页)创建仓库，仓库主页在哪?可以在右上角的your repositories，或者在个人主页(your profile)里面有repositories，点一下就是仓库主页。 在里面创建一个仓库，作为远程仓库。创建完之后，是个空仓库。有个提示，在本地可以用以下命令：12345git initgit add README.mdgit commit -m">
+  <meta name="description" content="js原型对我以前的研究js原型做一个总结：在刚刚接触JS原型链的时候都会接触到一个熟悉的名词：prototype；如果你曾经深入过prototype，你会接触到另一个名词：proto（注意：两边各有两条下划线，不是一条）。以下将会围绕prototype和proto这两个名词解释为什么不能在原型链上使用对象以及JS原型链的深层原理。 　　一、为什么不能在原型链上使用对象： 　　先举一个非常简单的例子">
 <meta name="keywords" content="time">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github_git">
-<meta property="og:url" content="http://yoursite.com/2019/05/05/github-git/index.html">
+<meta property="og:title" content="js—prototype">
+<meta property="og:url" content="http://yoursite.com/2019/05/10/js—prototype/index.html">
 <meta property="og:site_name" content="Now And Tomorrow">
-<meta property="og:description" content="远程仓库 搭建github就不说了，进入(仓库主页)创建仓库，仓库主页在哪?可以在右上角的your repositories，或者在个人主页(your profile)里面有repositories，点一下就是仓库主页。 在里面创建一个仓库，作为远程仓库。创建完之后，是个空仓库。有个提示，在本地可以用以下命令：12345git initgit add README.mdgit commit -m">
+<meta property="og:description" content="js原型对我以前的研究js原型做一个总结：在刚刚接触JS原型链的时候都会接触到一个熟悉的名词：prototype；如果你曾经深入过prototype，你会接触到另一个名词：proto（注意：两边各有两条下划线，不是一条）。以下将会围绕prototype和proto这两个名词解释为什么不能在原型链上使用对象以及JS原型链的深层原理。 　　一、为什么不能在原型链上使用对象： 　　先举一个非常简单的例子">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-05T10:51:09.143Z">
+<meta property="og:updated_time" content="2019-05-09T10:56:54.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github_git">
-<meta name="twitter:description" content="远程仓库 搭建github就不说了，进入(仓库主页)创建仓库，仓库主页在哪?可以在右上角的your repositories，或者在个人主页(your profile)里面有repositories，点一下就是仓库主页。 在里面创建一个仓库，作为远程仓库。创建完之后，是个空仓库。有个提示，在本地可以用以下命令：12345git initgit add README.mdgit commit -m">
+<meta name="twitter:title" content="js—prototype">
+<meta name="twitter:description" content="js原型对我以前的研究js原型做一个总结：在刚刚接触JS原型链的时候都会接触到一个熟悉的名词：prototype；如果你曾经深入过prototype，你会接触到另一个名词：proto（注意：两边各有两条下划线，不是一条）。以下将会围绕prototype和proto这两个名词解释为什么不能在原型链上使用对象以及JS原型链的深层原理。 　　一、为什么不能在原型链上使用对象： 　　先举一个非常简单的例子">
 
 
 
@@ -131,7 +131,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/05/github-git/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/10/js—prototype/">
 
 
 
@@ -141,7 +141,7 @@
   };
 </script>
 
-  <title>github_git | Now And Tomorrow</title>
+  <title>js—prototype | Now And Tomorrow</title>
   
 
 
@@ -375,7 +375,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/github-git/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/js—prototype/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="方鹏程">
@@ -392,7 +392,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">github_git
+          <h1 class="post-title" itemprop="name headline">js—prototype
 
               
             
@@ -418,7 +418,7 @@
                 
               
 
-              <time title="创建时间：2019-05-05 12:14:44 / 修改时间：10:51:09" itemprop="dateCreated datePublished" datetime="2019-05-05T12:14:44Z">2019-05-05</time>
+              <time title="创建时间：2019-05-09 18:53:42 / 修改时间：10:56:54" itemprop="dateCreated datePublished" datetime="2019-05-09T18:53:42Z">2019-05-09</time>
             
 
             
@@ -457,18 +457,49 @@
       
 
       
-        <h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><hr>
-<p>搭建github就不说了，进入(<strong>仓库主页</strong>)创建仓库，仓库主页在哪?<br>可以在右上角的your repositories，或者在个人主页(your profile)里面有repositories，点一下就是仓库主页。</p>
-<p>在里面创建一个仓库，作为远程仓库。创建完之后，是个空仓库。有个提示，在本地可以用以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/pcdegithub/learn.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
-<p>这样就把本地仓库与远程仓库建立了联系，同时，把本地仓库所有内容推送到远程仓库。 </p>
-<p>如果本地有仓库了，那么就不用再git init初始化一个本地仓库，直接将git remote add origin ssh  远程库的名字就是origin，这是Git默认的叫法。也可以改成别的，但是origin这个名字一看就知道是远程库。</p>
-<p>由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以就可以不用加-u</p>
-<hr>
-<p>要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；</p>
-<p>关联后，使用命令git push -u origin master第一次推送master分支的所有内容；</p>
-<p>此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；</p>
-<p>上次我们讲了先有本地库，后有远程库的时候，如何关联远程库。</p>
-<p>现在，假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆<br>要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。</p>
+        <h1 id="js原型"><a href="#js原型" class="headerlink" title="js原型"></a>js原型</h1><p>对我以前的研究js原型做一个总结：<br>在刚刚接触JS原型链的时候都会接触到一个熟悉的名词：prototype；如果你曾经深入过prototype，你会接触到另一个名词：<strong>proto</strong>（注意：两边各有两条下划线，不是一条）。以下将会围绕prototype和<strong>proto</strong>这两个名词解释为什么不能在原型链上使用对象以及JS原型链的深层原理。</p>
+<p>　　一、为什么不能在原型链上使用对象：</p>
+<p>　　先举一个非常简单的例子，我有一个类叫Humans（人类），然后我有一个对象叫Tom（一个人）和另一个对象叫Merry(另一个人)，很明显Tom和Merry都是由Humans这一个类实例化之后得到的，然后可以把这个例子写成如下代码：</p>
+<p>复制代码<br>function Humans() {<br>    this.foot = 2;<br>}<br>Humans.prototype.ability = true;</p>
+<p>var Tom = new Humans();<br>var Merry = new Humans();</p>
+<p>alert(Tom.foot);//结果：2<br>alert(Tom.ability);//结果：true<br>alert(Merry.foot);//结果：2<br>alert(Merry.ability);//结果：true<br>复制代码<br>　　以上是一个非常简单的面向对象的例子，相信都能看懂，如果尝试修改Tom的属性ability，则</p>
+<p>复制代码<br>function Humans() {<br>    this.foot = 2;<br>}<br>Humans.prototype.ability = true;</p>
+<p>var Tom = new Humans();<br>var Merry = new Humans();</p>
+<p>Tom.ability = false;<br>alert(Tom.foot);//结果：2<br>alert(Tom.ability);//结果：false<br>alert(Merry.foot);//结果：2<br>alert(Merry.ability);//结果：true<br>复制代码<br>　　以上可以看出Tom的ability属性的值改变了，但并不影响Merry的ability属性的值，这正是我们想要的结果，也是面向对象的好处，由同一个类实例化得到的各个对象之间是互不干扰的；OK，接下来给ability换成object对象又如何?代码如下：</p>
+<p>复制代码<br>function Humans() {<br>    this.foot = 2;<br>}<br>Humans.prototype.ability = {<br>    run : ‘100米/10秒’,<br>    jump : ‘3米’<br>};</p>
+<p>var Tom = new Humans();<br>var Merry = new Humans();</p>
+<p>Tom.ability = {<br>    run : ‘50米/10秒’,<br>    jump : ‘2米’<br>};<br>alert(Tom.ability.run); //结果：’50米/10秒’<br>alert(Tom.ability.jump); //结果：’2米’<br>alert(Merry.ability.run); //结果：’100米/10秒’<br>alert(Merry.ability.jump); //结果：’3米’<br>复制代码<br> 　　以上代码就是在原型链上使用了对象，但从以上代码可以看出Tom的ability属性的改变依然丝毫不会影响Merry的ability的属性，于是乎你会觉得这样的做法并无不妥，为什么说不能在原型链上使用对象?接下来的代码就会显得很不一样，并且可以完全表达出原型链上使用对象的危险性：</p>
+<p>复制代码<br>function Humans() {<br>    this.foot = 2;<br>}<br>Humans.prototype.ability = {<br>    run : ‘100米/10秒’,<br>    jump : ‘3米’<br>};</p>
+<p>var Tom = new Humans();<br>var Merry = new Humans();</p>
+<p>Tom.ability.run = ‘50米/10秒’;<br>Tom.ability.jump = ‘2米’;</p>
+<p>alert(Tom.ability.run); //结果：’50米/10秒’<br>alert(Tom.ability.jump); //结果：’2米’<br>alert(Merry.ability.run); //结果：’50米/10秒’<br>alert(Merry.ability.jump); //结果：’2米’<br>复制代码<br>　　没错，从以上代码的输出结果可以看出Tom的ability属性的改变影响到Merry的ability属性了，于是就可以明白在原型链上使用对象是非常危险的，很容易会打破实例化对象之间的相互独立性，这就是为什么不能在原型链上使用对象的原因?是的，但我想说的可不只如此，而是其中的原理，看完后面JS原型链的深层原理之后，相信你会完全明白。</p>
+<p>　　在以下第二部份解释JS原型链的深层原理之前，先来明确一个概念：原型链上的属性或方法都是被实例化对象共用的，正因如此，上面的Tom.ability.run=’50米/10秒’，改动了原型连上的ability才导致另一个对象Merry受影响，既然如此，你可能会问Tom.ability = {……}不也是改动了原型链上的ability吗，为什么Merry没有受影响?答案是Tom.ability = {……}并没有改动原型链上的ability属性，而是为Tom添加了一个自有属性ability，以后访问Tom.ability的时候不再需要访问原型链上的ability，而是访问其自有属性ability，这是就近原则；OK，如果你仍有疑问，可以用纸笔记下你的疑问，继续往下看你会更加明白。</p>
+<p>　　二、JS原型链的深层原理：</p>
+<p>　　首先要引入一个名词<strong>proto</strong>，<strong>proto</strong>是什么?在我的理解里，<strong>proto</strong>才是真正的原型链，prototype只是一个壳。如果你使用的是chrome浏览器，那么你可以尝试使用alert(Tom.<strong>proto</strong>.ability.run)，你发现这样的写法完全可行，而且事实上当只有原型链上存在ability属性的时候，Tom.ability其实是指向Tom.<strong>proto</strong>.ability的；当然，如果你跑到IE浏览器里尝试必然会报错，事实上IE浏览器禁止了对<strong>proto</strong>的访问，而chrome则是允许的，当然实际开发中，我并不建议直接就使用<strong>proto</strong>这一属性，但它往往在我们调试代码时发挥着重要作用。有人可能会问到底Tom.<strong>proto</strong>和Humans.prototype是什么关系，为了理清两者的关系，下面先列出三条法则：</p>
+<p>　　1、对象是拥有<strong>proto</strong>属性的，但没有prototype；例如：有Tom.<strong>proto</strong>，但没有Tom.prototype。</p>
+<p>　　2、类没有<strong>proto</strong>属性，但有prototype；例如：没有Humans.<strong>proto</strong>，但有Humans.prototype（这里必须纠正一下，同时非常感谢‘川川哥哥’提出这一处错处，确实是我在写到这一点的时候没有考虑清楚，事实上Humans也是Function的一个实例对象，因此Humans.<strong>proto</strong>===Function.prototype是绝对成立的，稍有特殊的是这时Function.prototype是指向一个Empty（空）函数，值得推敲）。</p>
+<p>　　3、由同一个类实例化（new）得到的对象的<strong>proto</strong>是引用该类的prototype的（也就是我们说的引用传递）；例如Tom和Merry的<strong>proto</strong>都引用自Humans的prototype。</p>
+<p> 　　OK，上面说过Tom.ability={……}其实并没有改变原型链上的ability属性，或者说并没有改变Tom.<strong>proto</strong>.ability，而是为Tom添加了一个自有的ability属性，为了说明这一点，我们再次回到以上的第三个代码块，其代码如下：</p>
+<p>复制代码<br>function Humans() {<br>    this.foot = 2;<br>}<br>Humans.prototype.ability = {<br>    run : ‘100米/10秒’,<br>    jump : ‘3米’<br>};</p>
+<p>var Tom = new Humans();<br>var Merry = new Humans();</p>
+<p>Tom.ability = {<br>    run : ‘50米/10秒’,<br>    jump : ‘2米’<br>};<br>alert(Tom.ability.run); //结果：’50米/10秒’<br>alert(Tom.ability.jump); //结果：’2米’<br>alert(Merry.ability.run); //结果：’100米/10秒’<br>alert(Merry.ability.jump); //结果：’3米’<br>复制代码<br>　　当为Tom.ability赋予新的值后，再次访问Tom.ability时就不再指向Tom.<strong>proto</strong>.ability了，因为这时其实是为Tom添加了自有属性ability，可以就近取值了，你可以尝试用Chrome浏览器分别alert(Tom.ability.run)和alert(Tom.<strong>proto</strong>.ability.run)，你会发现确实存在两个不同的值，再看完下面的图后，相信你会完全明白：</p>
+<p>　　于是可以有这样一个结论：当访问一个对象的属性或方法的时候，如果对象本身有这样一个属性或方法就会取其自身的属性或方法，否则会尝试到原型链（<strong>proto</strong>）上寻找同名的属性或方法。明白了这一点后，要解释以上第四个代码块的原理也非常容易了，其代码如下：</p>
+<p>复制代码<br>function Humans() {<br>    this.foot = 2;<br>}<br>Humans.prototype.ability = {<br>    run : ‘100米/10秒’,<br>    jump : ‘3米’<br>};</p>
+<p>var Tom = new Humans();<br>var Merry = new Humans();</p>
+<p>Tom.ability.run = ‘50米/10秒’;<br>Tom.ability.jump = ‘2米’;</p>
+<p>alert(Tom.ability.run); //结果：’50米/10秒’<br>alert(Tom.ability.jump); //结果：’2米’<br>alert(Merry.ability.run); //结果：’50米/10秒’<br>alert(Merry.ability.jump); //结果：’2米’<br>复制代码<br>　　当Tom.ability.run=’50米/10秒’的时候，JS引擎会认为Tom.ability是存在的，因为有Tom.ability才会有Tom.ability.run，所以引擎开始寻找ability属性，首先是会从Tom的自有属性里寻找，在自有属性里并没有找到，于是到原型链里找，结果找到了，于是Tom.ability就指向了Tom.<strong>proto</strong>.ability了，修改Tom.ability.run的时候实际上就是修改了原型链上的ability了，因而影响到了所有由Humans实例化得到的对象，如下图：</p>
+<p>　　希望上面所讲的内容足够清楚明白，下面通过类的继承对原型链作更进一步的深入：</p>
+<p>　　先来看一个类的继承的例子，代码如下：</p>
+<p>复制代码<br>function Person() {<br>    this.hand = 2;<br>    this.foot = 2;<br>}<br>Person.prototype.say = function () {<br>    alert(‘hello’);<br>}<br>function Man() {<br>    Person.apply(this, arguments);//对象冒充<br>    this.head = 1;<br>}<br>Man.prototype = new Person();//原型链<br>Man.prototype.run = function () {<br>    alert(‘I am running’);<br>};<br>Man.prototype.say = function () {<br>    alert(‘good byte’);<br>}<br>var man1 = new Man();<br>复制代码<br> 　　以上代码是使用对象冒充和原型链相结合的混合方法实现类的继承，也是目前JS主流的实现类的继承的方法，如果对这种继承方法缺乏了解，可以看看这里。</p>
+<p>　　接下来看看以上实现继承后的原型链，可以运用prototype和<strong>proto</strong>来解释其中的原理：</p>
+<p>　　1、从man1 = new Man()，可以知道man1的<strong>proto</strong>是指向Man.prototype的，于是有:</p>
+<p>　　公式一：man1.<strong>proto</strong> === Man.prototype 为true</p>
+<p>　　2、从上面的代码原型链继承里面看到这一句代码 Man.prototype = new Person()，作一个转换，变成：Man.prototype = a，a = new Perosn()；一个等式变成了两个等式，于是由a = new Perosn()可以推导出a.<strong>proto</strong> = Person.prototype，结合Man.prototype = a，于是可以得到：</p>
+<p>　　公式二：Man.prototype.<strong>proto</strong> === Person.prototype 为true</p>
+<p>　　由公式一和公式二我们就得出了以下结论：</p>
+<p>　　公式三：man1.<strong>proto</strong>.<strong>proto</strong> === Person.prototype 为true</p>
+<p>　　公式三就是上述代码的原型链，有兴趣的话，可以尝试去推导多重继承的原型链，继承得越多，你会得到一个越长的原型链，而这就是原型链的深层原理；从公式三可以得出一个结论：当你访问一个对象的属性或方法时，会首先在自有属性寻找（man1），如果没有则到原型链找，如果在链上的第一环（第一个<strong>proto</strong>）没找到，则到下一环找（下一个<strong>proto</strong>），直到找到为止，如果到了原型链的尽头仍没找到则返回undefined（这里必须补充一点：同时非常感谢深蓝色梦想提出的疑问：尽头不是到了Object吗?是的，原型链的尽头就是Object，如果想问为什么，不妨做一个小小的实验：如果指定Object.prototype.saySorry = ‘I am sorry’，那么你会惊喜地发现alert(man1.saySorry)是会弹出结果‘I am sorry’的）。</p>
+<p>　　以上就是原型链的深层原理，说难其实也算容易，如果细心研究，会发现原型链上有很多惊喜。</p>
 
       
     </div>
@@ -510,8 +541,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/04/learngit/" rel="next" title="learngit">
-                <i class="fa fa-chevron-left"></i> learngit
+              <a href="/2019/05/09/vue/" rel="next" title="vue">
+                <i class="fa fa-chevron-left"></i> vue
               </a>
             
           </div>
@@ -520,8 +551,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/09/vue/" rel="prev" title="vue">
-                vue <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/01/hello-world/" rel="prev" title="Hexo几个命令">
+                Hexo几个命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -745,7 +776,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#远程仓库"><span class="nav-number">1.</span> <span class="nav-text">远程仓库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js原型"><span class="nav-number">1.</span> <span class="nav-text">js原型</span></a></li></ol></div>
             
 
           </div>

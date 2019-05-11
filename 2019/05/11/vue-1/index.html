@@ -110,18 +110,18 @@
 
 
 
-  <meta name="description" content="父子组件交互父组件给子组件传值&amp;nbsp;&amp;nbsp;1. 在父组件中调用子组件中时，绑定动态属性1&amp;lt;v-header :title=&quot;title&quot;&amp;gt;&amp;lt;/v-header&amp;gt; &amp;nbsp;&amp;nbsp;2. 在子组件中接受传过来的数据有两种表示方式：  通过props直接接收 传过来的属性，如：props:[‘title’] 接收是可以验证父组件传过来的属性，不符报错，如： p">
+  <meta name="description" content="父子组件交互父组件给子组件传值 在父组件中调用子组件中时，绑定动态属性 1&amp;lt;v-header :title=&quot;title&quot;&amp;gt;&amp;lt;/v-header&amp;gt;  在子组件中接受传过来的数据有两种表示方式：    通过props直接接收 传过来的属性，如：props:[‘title’] 接收是可以验证父组件传过来的属性，不符报错，如： props:{‘title’:String }  父">
 <meta name="keywords" content="time">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-1">
 <meta property="og:url" content="http://yoursite.com/2019/05/11/vue-1/index.html">
 <meta property="og:site_name" content="Now And Tomorrow">
-<meta property="og:description" content="父子组件交互父组件给子组件传值&amp;nbsp;&amp;nbsp;1. 在父组件中调用子组件中时，绑定动态属性1&amp;lt;v-header :title=&quot;title&quot;&amp;gt;&amp;lt;/v-header&amp;gt; &amp;nbsp;&amp;nbsp;2. 在子组件中接受传过来的数据有两种表示方式：  通过props直接接收 传过来的属性，如：props:[‘title’] 接收是可以验证父组件传过来的属性，不符报错，如： p">
+<meta property="og:description" content="父子组件交互父组件给子组件传值 在父组件中调用子组件中时，绑定动态属性 1&amp;lt;v-header :title=&quot;title&quot;&amp;gt;&amp;lt;/v-header&amp;gt;  在子组件中接受传过来的数据有两种表示方式：    通过props直接接收 传过来的属性，如：props:[‘title’] 接收是可以验证父组件传过来的属性，不符报错，如： props:{‘title’:String }  父">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-11T08:59:32.515Z">
+<meta property="og:updated_time" content="2019-05-11T09:01:32.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-1">
-<meta name="twitter:description" content="父子组件交互父组件给子组件传值&amp;nbsp;&amp;nbsp;1. 在父组件中调用子组件中时，绑定动态属性1&amp;lt;v-header :title=&quot;title&quot;&amp;gt;&amp;lt;/v-header&amp;gt; &amp;nbsp;&amp;nbsp;2. 在子组件中接受传过来的数据有两种表示方式：  通过props直接接收 传过来的属性，如：props:[‘title’] 接收是可以验证父组件传过来的属性，不符报错，如： p">
+<meta name="twitter:description" content="父子组件交互父组件给子组件传值 在父组件中调用子组件中时，绑定动态属性 1&amp;lt;v-header :title=&quot;title&quot;&amp;gt;&amp;lt;/v-header&amp;gt;  在子组件中接受传过来的数据有两种表示方式：    通过props直接接收 传过来的属性，如：props:[‘title’] 接收是可以验证父组件传过来的属性，不符报错，如： props:{‘title’:String }  父">
 
 
 
@@ -418,7 +418,7 @@
                 
               
 
-              <time title="创建时间：2019-05-11 10:55:33 / 修改时间：08:59:32" itemprop="dateCreated datePublished" datetime="2019-05-11T10:55:33Z">2019-05-11</time>
+              <time title="创建时间：2019-05-11 10:55:33 / 修改时间：09:01:32" itemprop="dateCreated datePublished" datetime="2019-05-11T10:55:33Z">2019-05-11</time>
             
 
             
@@ -457,8 +457,13 @@
       
 
       
-        <h1 id="父子组件交互"><a href="#父子组件交互" class="headerlink" title="父子组件交互"></a>父子组件交互</h1><h2 id="父组件给子组件传值"><a href="#父组件给子组件传值" class="headerlink" title="父组件给子组件传值"></a>父组件给子组件传值</h2><p>&nbsp;&nbsp;1. 在父组件中调用子组件中时，绑定动态属性<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">v-header</span> <span class="attr">:title</span>=<span class="string">"title"</span>&gt;</span><span class="tag">&lt;/<span class="name">v-header</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>&nbsp;&nbsp;2. 在子组件中接受传过来的数据有两种表示方式：</p>
+        <h1 id="父子组件交互"><a href="#父子组件交互" class="headerlink" title="父子组件交互"></a>父子组件交互</h1><h2 id="父组件给子组件传值"><a href="#父组件给子组件传值" class="headerlink" title="父组件给子组件传值"></a>父组件给子组件传值</h2><ol>
+<li><p>在父组件中调用子组件中时，绑定动态属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">v-header</span> <span class="attr">:title</span>=<span class="string">"title"</span>&gt;</span><span class="tag">&lt;/<span class="name">v-header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在子组件中接受传过来的数据有两种表示方式：</p>
+</li>
+</ol>
 <ul>
 <li>通过props直接接收 传过来的属性，如：props:[‘title’]</li>
 <li>接收是可以验证父组件传过来的属性，不符报错，如： props:{‘title’:String }</li>

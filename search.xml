@@ -12,6 +12,11 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[vue非父子组件传值]]></title>
+    <url>%2F2019%2F05%2F12%2Fvue%E9%9D%9E%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[非父子组件传值 1、新建一个js文件 然后引入vue 实例化vue 最后暴露这个实例 2、在要广播的地方引入刚才定义的实例 3、通过 VueEmit.$emit(‘名称’,’数据’) 4、在接收收数据的地方通过 $om接收广播的数据 VueEmit.$on(‘名称’,function(){ })]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[vue-1]]></title>
     <url>%2F2019%2F05%2F11%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%2F</url>
     <content type="text"><![CDATA[父子组件交互父组件给子组件传值 在父组件中调用子组件中时，绑定动态属性 1&lt;v-header :title="title"&gt;&lt;/v-header&gt; 在子组件中接受传过来的数据有两种表示方式： 通过props直接接收 传过来的属性，如：props:[‘title’] 接收是可以验证父组件传过来的属性，不符报错，如： props:{‘title’:String } 父组件主动获取子组件传值 在父组件中调用子组件中时，定义一个ref1&lt;v-header ref="header"&gt;&lt;/v-header&gt; 在父组件中通过this.$refs.header.子组件属性/方法 看看vue的官方api说明： ref 被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 $refs 对象上。如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素；如果用在子组件上，引用就指向组件实例： 子组件主动获取父组件值 这种是来替代第一种父组件给子组件传值的，通过$parent直接获取父组件的属性和方法。this.$parent.父组件属性/方法看看vue的官方api说明： $parent 属性可以用来从一个子组件访问父组件的实例。它提供了一种机会，可以在后期随时触达父级组件，以替代将数据以 prop 的方式传入子组件的方式。]]></content>

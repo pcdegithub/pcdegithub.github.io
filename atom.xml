@@ -39,6 +39,28 @@
   </entry>
   
   <entry>
+    <title>vue非父子组件传值</title>
+    <link href="http://yoursite.com/2019/05/12/vue%E9%9D%9E%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/"/>
+    <id>http://yoursite.com/2019/05/12/vue非父子组件传值/</id>
+    <published>2019-05-11T17:34:11.000Z</published>
+    <updated>2019-05-11T22:41:49.740Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="非父子组件传值"><a href="#非父子组件传值" class="headerlink" title="非父子组件传值"></a>非父子组件传值</h1><p>  1、新建一个js文件   然后引入vue  实例化vue  最后暴露这个实例</p><p>  2、在要广播的地方引入刚才定义的实例</p><p>  3、通过 VueEmit.$emit(‘名称’,’数据’)</p><p>  4、在接收收数据的地方通过 $om接收广播的数据<br>    VueEmit.$on(‘名称’,function(){</p><pre><code>})</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;非父子组件传值&quot;&gt;&lt;a href=&quot;#非父子组件传值&quot; class=&quot;headerlink&quot; title=&quot;非父子组件传值&quot;&gt;&lt;/a&gt;非父子组件传值&lt;/h1&gt;&lt;p&gt;  1、新建一个js文件   然后引入vue  实例化vue  最后暴露这个实例&lt;/p&gt;
+&lt;p&gt;  
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>vue-1</title>
     <link href="http://yoursite.com/2019/05/11/vue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
     <id>http://yoursite.com/2019/05/11/vue父子组件通信/</id>

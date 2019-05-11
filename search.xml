@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <title><![CDATA[vue-1]]></title>
-    <url>%2F2019%2F05%2F11%2Fvue-1%2F</url>
+    <url>%2F2019%2F05%2F11%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%2F</url>
     <content type="text"><![CDATA[父子组件交互父组件给子组件传值 在父组件中调用子组件中时，绑定动态属性 1&lt;v-header :title="title"&gt;&lt;/v-header&gt; 在子组件中接受传过来的数据有两种表示方式： 通过props直接接收 传过来的属性，如：props:[‘title’] 接收是可以验证父组件传过来的属性，不符报错，如： props:{‘title’:String } 父组件主动获取子组件传值 在父组件中调用子组件中时，定义一个ref1&lt;v-header ref="header"&gt;&lt;/v-header&gt; 在父组件中通过this.$refs.header.子组件属性/方法 看看vue的官方api说明： ref 被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 $refs 对象上。如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素；如果用在子组件上，引用就指向组件实例： 子组件主动获取父组件值 这种是来替代第一种父组件给子组件传值的，通过$parent直接获取父组件的属性和方法。this.$parent.父组件属性/方法看看vue的官方api说明： $parent 属性可以用来从一个子组件访问父组件的实例。它提供了一种机会，可以在后期随时触达父级组件，以替代将数据以 prop 的方式传入子组件的方式。]]></content>
   </entry>
   <entry>
@@ -28,7 +28,7 @@
   </entry>
   <entry>
     <title><![CDATA[vue]]></title>
-    <url>%2F2019%2F05%2F09%2Fvue%2F</url>
+    <url>%2F2019%2F05%2F09%2Fvue%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC%E5%AD%90%E7%BB%84%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[vue的父子传值（包括父组件，值，方法）vue的父组件传递给子组件，两步走：在父组件中：1、导入子组件（这是成为父子组件前提）2、components中申明组件3、view中引用4、引用中引入传递的变量 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&lt;template&gt; &lt;!-- 所有的内容要被根节点包含起来 --&gt; &lt;div id=&quot;home&quot;&gt; &lt;v-header :title=&quot;title&quot; :homemsg=&apos;msg&apos; :run=&quot;run&quot; :home=&quot;this&quot;&gt;&lt;/v-header&gt; &lt;hr&gt; 首页组件 &lt;/div&gt;&lt;/template&gt;&lt;script&gt;/*父组件给子组件传值 1.父组件调用子组件的时候 绑定动态属性 &lt;v-header :title=&quot;title&quot;&gt;&lt;/v-header&gt; 2、在子组件里面通过 props接收父组件传过来的数据*/ import Header from &apos;./Header.vue&apos;; export default&#123; data()&#123; return &#123; msg:&apos;我是一个home组件&apos;, title:&apos;首页111&apos; &#125; &#125;, components:&#123; &apos;v-header&apos;:Header &#125;, methods:&#123; run(data)&#123; alert(&apos;我是Home组件的run方法&apos;+data); &#125; &#125; &#125;&lt;/script&gt;&lt;style lang=&quot;scss&quot; scoped&gt; /*css 局部作用域 scoped*/ h2&#123; color:red &#125; &lt;/style&gt; 接下来在子组件中使用变量，在props中接收123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051&lt;template&gt; &lt;div&gt; &lt;h2&gt;我是头部组件--&#123;&#123;title&#125;&#125;---&#123;&#123;homemsg&#125;&#125;&lt;/h2&gt; &lt;button @click=&quot;run(&apos;123&apos;)&quot;&gt;执行父组件的方法&lt;/button&gt; &lt;br /&gt; &lt;br /&gt; &lt;button @click=&quot;getParent()&quot;&gt;获取父组件的数据和方法&lt;/button&gt; &lt;/div&gt;&lt;/template&gt;&lt;script&gt; export default&#123; data()&#123; return&#123; msg:&apos;子组件的msg&apos; &#125; &#125;, methods:&#123; getParent()&#123; // alert(this.title) // alert(this.home.title) this.home.run() &#125; &#125;, props:[&apos;title&apos;,&apos;homemsg&apos;,&apos;run&apos;,&apos;home&apos;] &#125;&lt;/script&gt; 还可以对父组件传递过来的值验证，不是这种类型就不接受，控制台报错，在子组件接受传递过来的props中设置 12345props:&#123; title:String, getParent:Function, getHome:Function &#125;]]></content>
   </entry>
   <entry>

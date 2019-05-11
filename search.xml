@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[vue非父子组件传值]]></title>
     <url>%2F2019%2F05%2F12%2Fvue%E9%9D%9E%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC%2F</url>
-    <content type="text"><![CDATA[非父子组件传值 1、新建一个js文件 然后引入vue 实例化vue 最后暴露这个实例 2、在要广播的地方引入刚才定义的实例 3、通过 VueEmit.$emit(‘名称’,’数据’) 4、在接收收数据的地方通过 $om接收广播的数据 VueEmit.$on(‘名称’,function(){ })]]></content>
+    <content type="text"><![CDATA[非父子组件传值 1、新建一个js文件 然后引入vue 实例化vue 最后暴露这个实例 2、在要广播的地方引入刚才定义的实例 3、通过 VueEmit.$emit(‘名称’,’数据’) 4、在接收收数据的地方通过 $om接收广播的数据 123VueEmit.$on('名称',function()&#123;&#125;)]]></content>
   </entry>
   <entry>
     <title><![CDATA[vue-1]]></title>

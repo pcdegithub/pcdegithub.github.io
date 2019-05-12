@@ -39,13 +39,34 @@
   </entry>
   
   <entry>
+    <title>vue路由</title>
+    <link href="http://yoursite.com/2019/05/12/vue%E8%B7%AF%E7%94%B1/"/>
+    <id>http://yoursite.com/2019/05/12/vue路由/</id>
+    <published>2019-05-12T09:38:32.000Z</published>
+    <updated>2019-05-12T04:11:05.399Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vue路由"><a href="#vue路由" class="headerlink" title="vue路由"></a>vue路由</h1><p>官网：<a href="https://router.vuejs.org/zh/" target="_blank" rel="noopener">vue路由</a></p><p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。</p><p>就是在父组件上可以自由切换子组件<br>配置路由步骤：</p><pre><code>1、创建组件 引入组件2、定义路由  （建议复制s）    const routes = [      { path: &apos;/foo&apos;, component: Foo },      { path: &apos;/bar&apos;, component: Bar },      { path: &apos;*&apos;, redirect: &apos;/home&apos; }   /*默认跳转路由*/    ]3、实例化VueRouter    const router = new VueRouter({      routes // （缩写）相当于 routes: routes    })4、挂载new Vue({  el: &apos;#app&apos;,  router，  render: h =&gt; h(App)})5 、根组件的模板里面放上这句话   &lt;router-view&gt;&lt;/router-view&gt;         6、路由跳转&lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt; &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt;</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;vue路由&quot;&gt;&lt;a href=&quot;#vue路由&quot; class=&quot;headerlink&quot; title=&quot;vue路由&quot;&gt;&lt;/a&gt;vue路由&lt;/h1&gt;&lt;p&gt;官网：&lt;a href=&quot;https://router.vuejs.org/zh/&quot; target=&quot;_blank&quot; 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>vue非父子组件传值</title>
     <link href="http://yoursite.com/2019/05/12/vue%E9%9D%9E%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/"/>
     <id>http://yoursite.com/2019/05/12/vue非父子组件传值/</id>
     <published>2019-05-11T17:34:11.000Z</published>
-    <updated>2019-05-11T22:44:25.461Z</updated>
+    <updated>2019-05-12T01:50:02.947Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="非父子组件传值"><a href="#非父子组件传值" class="headerlink" title="非父子组件传值"></a>非父子组件传值</h1><p>  1、新建一个js文件   然后引入vue  实例化vue  最后暴露这个实例</p><p>  2、在要广播的地方引入刚才定义的实例</p><p>  3、通过 VueEmit.$emit(‘名称’,’数据’)</p><p>  4、在接收收数据的地方通过 $om接收广播的数据<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">VueEmit.$on(<span class="string">'名称'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="非父子组件传值"><a href="#非父子组件传值" class="headerlink" title="非父子组件传值"></a>非父子组件传值</h1><p>  1、新建一个js文件   然后引入vue  实例化vue  最后暴露这个实例</p><p>  2、在要广播的地方引入刚才定义的实例</p><p>  3、通过 VueEmit.$emit(‘名称’,’数据’)<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=&quot;emitnews()&quot;&gt;news组件广播数据&lt;/button&gt;</span><br><span class="line"> methods:&#123;</span><br><span class="line">   emitnews()&#123;</span><br><span class="line">   vueEvent.$emit(&apos;from-news&apos;,this.name);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>  4、在接收收数据的地方通过 $om接收广播的数据<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> mounted()&#123;   <span class="comment">//页面一刷新，就监听</span></span><br><span class="line">VueEmit.$on(<span class="string">'名称'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     

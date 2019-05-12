@@ -12,9 +12,14 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[vue路由]]></title>
+    <url>%2F2019%2F05%2F12%2Fvue%E8%B7%AF%E7%94%B1%2F</url>
+    <content type="text"><![CDATA[vue路由官网：vue路由 Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。 就是在父组件上可以自由切换子组件配置路由步骤： 1、创建组件 引入组件 2、定义路由 （建议复制s） const routes = [ { path: &apos;/foo&apos;, component: Foo }, { path: &apos;/bar&apos;, component: Bar }, { path: &apos;*&apos;, redirect: &apos;/home&apos; } /*默认跳转路由*/ ] 3、实例化VueRouter const router = new VueRouter({ routes // （缩写）相当于 routes: routes }) 4、挂载 new Vue({ el: &apos;#app&apos;, router， render: h =&gt; h(App) }) 5 、根组件的模板里面放上这句话 &lt;router-view&gt;&lt;/router-view&gt; 6、路由跳转 &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt; &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt;]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[vue非父子组件传值]]></title>
     <url>%2F2019%2F05%2F12%2Fvue%E9%9D%9E%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC%2F</url>
-    <content type="text"><![CDATA[非父子组件传值 1、新建一个js文件 然后引入vue 实例化vue 最后暴露这个实例 2、在要广播的地方引入刚才定义的实例 3、通过 VueEmit.$emit(‘名称’,’数据’) 4、在接收收数据的地方通过 $om接收广播的数据 123VueEmit.$on('名称',function()&#123;&#125;)]]></content>
+    <content type="text"><![CDATA[非父子组件传值 1、新建一个js文件 然后引入vue 实例化vue 最后暴露这个实例 2、在要广播的地方引入刚才定义的实例 3、通过 VueEmit.$emit(‘名称’,’数据’) 123456&lt;button @click=&quot;emitnews()&quot;&gt;news组件广播数据&lt;/button&gt; methods:&#123; emitnews()&#123; vueEvent.$emit(&apos;from-news&apos;,this.name); &#125;&#125; 4、在接收收数据的地方通过 $om接收广播的数据 12345 mounted()&#123; //页面一刷新，就监听VueEmit.$on('名称',function()&#123;&#125;) &#125;]]></content>
   </entry>
   <entry>
     <title><![CDATA[vue-1]]></title>

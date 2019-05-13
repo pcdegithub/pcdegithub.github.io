@@ -39,6 +39,27 @@
   </entry>
   
   <entry>
+    <title>vue动态路由</title>
+    <link href="http://yoursite.com/2019/05/12/vue%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/"/>
+    <id>http://yoursite.com/2019/05/12/vue动态路由/</id>
+    <published>2019-05-12T14:13:17.000Z</published>
+    <updated>2019-05-13T14:30:32.859Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vue-动态路由"><a href="#vue-动态路由" class="headerlink" title="vue 动态路由"></a>vue 动态路由</h1><h2 id="传值"><a href="#传值" class="headerlink" title="传值"></a>传值</h2><p>每配置router-link跳转，就在main.js中配置一次路由<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;&apos;/content/&apos;+key&quot;&gt;&#123;&#123;key&#125;&#125;--&#123;&#123;item&#125;&#125;&lt;/router-link&gt;</span><br><span class="line"></span><br><span class="line">import content from &apos;./components/content.vue&apos;;</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; path: &apos;/content/:id&apos;, component: content &#125;</span><br><span class="line">这就是动态路由，参数不同都能传到同一个路由即/content中，可以获取不同的参数，</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mounted()&#123;//模板渲染完成之后触发的事件，f5刷新触发的事件</span><br><span class="line"></span><br><span class="line">          /* console.log(this.$route.params);  获取动态路由传值*/</span><br><span class="line"></span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">绑定数据用：绑定,下面就是将key绑定到router-link上</span><br><span class="line">&lt;router-link :to=&quot;&apos;/content/&apos;+key&quot;&gt;&#123;&#123;key&#125;&#125;--&#123;&#123;item&#125;&#125;&lt;/router-link&gt;</span><br></pre></td></tr></table></figure><p>总结：动态路由：第一步：配置动态路由 { path: ‘/content/:id’, component: content }</p><p>第二步：在对应的页面获取动态路由的传值<br>this.$route.params</p><h2 id="get传值"><a href="#get传值" class="headerlink" title="get传值"></a>get传值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">get传值就是get请求携带参数</span><br><span class="line">&lt;router-link :to=&quot;&apos;/content?id=&apos;+key&quot;&gt;&#123;&#123;key&#125;&#125;--&#123;&#123;item&#125;&#125;&lt;/router-link&gt;</span><br><span class="line">绑定路由的时候</span><br><span class="line">  &#123; path: &apos;/content&apos;, component: Content &#125;就不需要加：id了，</span><br><span class="line">  其实上面的传值是rest风格传值，一般用在android中</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;vue-动态路由&quot;&gt;&lt;a href=&quot;#vue-动态路由&quot; class=&quot;headerlink&quot; title=&quot;vue 动态路由&quot;&gt;&lt;/a&gt;vue 动态路由&lt;/h1&gt;&lt;h2 id=&quot;传值&quot;&gt;&lt;a href=&quot;#传值&quot; class=&quot;headerlink&quot; titl
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>vue路由</title>
     <link href="http://yoursite.com/2019/05/12/vue%E8%B7%AF%E7%94%B1/"/>
     <id>http://yoursite.com/2019/05/12/vue路由/</id>

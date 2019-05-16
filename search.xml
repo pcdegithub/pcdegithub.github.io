@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[vue路由编程式导航]]></title>
     <url>%2F2019%2F05%2F16%2Fvue%E8%B7%AF%E7%94%B1%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA%2F</url>
-    <content type="text"><![CDATA[vue路由编程式导航就是通过js来跳转到页面]]></content>
+    <content type="text"><![CDATA[vue路由编程式导航就是通过js来跳转到页面在methods中定义一个方法： 1234getContent()&#123; this.$router.push(&#123;path:'/content'&#125;) &#125;// 这就是js代码执行跳转 12 &lt;!--给个按钮--&gt;&lt;button @click="requestData()"&gt;请求数据&lt;/button&gt; 声明式 编程式 router.replace(…) 除了使用 创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现即上面那个。 vue路径的hash模式和history模式 在main.js中，创建vue路由实例时 12345const router = new VueRouter(&#123; mode: 'history', /*hash模式改为history ，默认 hash 模式 */ routes // （缩写）相当于 routes: routes &#125;) hash模式路径：http://localhost:8080/#/content/499 带个# history模式路径：http://localhost:8080/content/499 需要后台配置支持]]></content>
   </entry>
   <entry>
     <title><![CDATA[vue动态路由请求数据]]></title>

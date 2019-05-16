@@ -12,6 +12,11 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[vue路由编程式导航]]></title>
+    <url>%2F2019%2F05%2F16%2Fvue%E8%B7%AF%E7%94%B1%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA%2F</url>
+    <content type="text"><![CDATA[vue路由编程式导航就是通过js来跳转到页面]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[vue动态路由请求数据]]></title>
     <url>%2F2019%2F05%2F14%2Fvue%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%2F</url>
     <content type="text"><![CDATA[vue动态路由请求数据 安装请求数据模块,cnpm install vue-resource –save 在main.js中引入vue-resource插件 在需要的组件的里请求数据，method里定义方法在news.vue中发送请求jsonp请求，1234567891011121314151617181920212223242526272829303132333435363738394041 requestData()&#123; var api=&quot;http://www.phonegap100.com/appapi.php?a=getPortalList&amp;catid=20&amp;page=1&quot;; this.$http.jsonp(api).then(function(response)&#123; console.log(response); console.log(this); this.list=response.body.result &#125;, function(err)&#123; console.log(err); &#125;) &#125; &#125;, mounted()&#123; this.requestData(); &#125;在mounted中页面刷新时就执行，然后配置路由link&lt;ul&gt; &lt;li v-for=&quot;(item,key) in list&quot;&gt; &lt;router-link :to=&quot;&apos;/content?aid=&apos;+item.aid&quot;&gt;&#123;&#123;item.aid&#125;&#125;--&#123;&#123;item.title&#125;&#125;&lt;/router-link&gt;&lt;/li&gt;在content组件中，也在页面刷新时发送个请求，是获取上面路由的动态参数，来执行下面的请求接口的请求携带参数，这就是动态路由mounted()&#123; //console.log(); 获取动态路由传值 var aid=this.$route.query.aid; console.log(&quot;affffffffffffffffffff&quot;,aid) this.requestData(aid); &#125;, methods:&#123; requestData(aid)&#123; var api=&quot;http://www.phonegap100.com/appapi.php?a=getPortalArticle&amp;aid=&quot;+aid this.$http.get(api).then(function(response)&#123; this.list=response.body.result[&quot;0&quot;] console.log(&quot;response----------&quot;,response) &#125;,function(err)&#123; console.log(err); &#125;)]]></content>
@@ -19,7 +24,7 @@
   <entry>
     <title><![CDATA[vue动态路由]]></title>
     <url>%2F2019%2F05%2F12%2Fvue%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%2F</url>
-    <content type="text"><![CDATA[vue 动态路由传值每配置router-link跳转，就在main.js中配置一次路由123&lt;router-link :to=&quot;&apos;/content/&apos;+key&quot;&gt;&#123;&#123;key&#125;&#125;--&#123;&#123;item&#125;&#125;&lt;/router-link&gt;import content from &apos;./components/content.vue&apos;; 12&#123; path: &apos;/content/:id&apos;, component: content &#125;这就是动态路由，参数不同都能传到同一个路由即/content中，可以获取不同的参数， 12345mounted()&#123;//模板渲染完成之后触发的事件，f5刷新触发的事件 /* console.log(this.$route.params); 获取动态路由传值*/ &#125; 12绑定数据用：绑定,下面就是将key绑定到router-link上&lt;router-link :to=&quot;&apos;/content/&apos;+key&quot;&gt;&#123;&#123;key&#125;&#125;--&#123;&#123;item&#125;&#125;&lt;/router-link&gt; 总结：动态路由：第一步：配置动态路由 { path: ‘/content/:id’, component: content } 第二步：在对应的页面获取动态路由的传值this.$route.params get传值12345get传值就是get请求携带参数&lt;router-link :to=&quot;&apos;/content?id=&apos;+key&quot;&gt;&#123;&#123;key&#125;&#125;--&#123;&#123;item&#125;&#125;&lt;/router-link&gt;绑定路由的时候 &#123; path: &apos;/content&apos;, component: Content &#125;就不需要加：id了， 其实上面的传值是rest风格传值，一般用在android中]]></content>
+    <content type="text"><![CDATA[vue 动态路由传值每配置router-link跳转，就在main.js中配置一次路由123&lt;router-link :to=&quot;&apos;/content/&apos;+key&quot;&gt;&#123;&#123;key&#125;&#125;--&#123;&#123;item&#125;&#125;&lt;/router-link&gt;import content from &apos;./components/content.vue&apos;; 12&#123; path: &apos;/content/:id&apos;, component: content &#125;这就是动态路由，参数不同都能传到同一个路由即/content中，可以获取不同的参数， 12345mounted()&#123;//模板渲染完成之后触发的事件，f5刷新触发的事件 /* console.log(this.$route.params); 获取动态路由传值*/ &#125; 12绑定数据用：绑定,下面就是将key绑定到router-link上&lt;router-link :to=&quot;&apos;/content/&apos;+key&quot;&gt;&#123;&#123;key&#125;&#125;--&#123;&#123;item&#125;&#125;&lt;/router-link&gt; 总结：动态路由：第一步：配置动态路由 { path: ‘/content/:id’, component: content } 第二步：在对应的页面获取动态路由的传值this.$route.params get传值123456get传值就是get请求携带参数&lt;router-link :to=&quot;&apos;/content?id=&apos;+key&quot;&gt;&#123;&#123;key&#125;&#125;--&#123;&#123;item&#125;&#125;&lt;/router-link&gt;绑定路由的时候 &#123; path: &apos;/content&apos;, component: Content &#125;就不需要加：id了， 其实上面的传值是rest风格传值，一般用在android中this.$route.query获取携带的参数]]></content>
   </entry>
   <entry>
     <title><![CDATA[vue路由]]></title>

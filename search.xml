@@ -12,9 +12,14 @@
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>%2F2019%2F05%2F24%2F%E5%89%8D%E7%AB%AF%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[前端几个构建工具]]></title>
     <url>%2F2019%2F05%2F20%2F%E5%89%8D%E7%AB%AF%E5%87%A0%E4%B8%AA%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7%2F</url>
-    <content type="text"><![CDATA[1.npm 就不扯了，天天用,npm 下载的依赖安装位置： 若是全局npm install -g 则放在C:\Users\fang\AppData\Roaming\npm\node_modules 是默认位置 若是在命令行输入npm install 没有-g,就是在当前目录npm init 会在当前目录下初始化package.json来管理npm信息 2.bower包管理工具，和npm一样。web应用程序依赖管理。安装：npm install -g bower,命令和npm差不多 bower init 清单文件定义bower.json。这类似于Node package.json或Ruby Gemfile。 一般来说bower install jQuery –save-dev ，这个操作可以往bower.json里面写入对应的模块，它可以实现不同之间的重复安装。其他项目成员，拿到项目之后，只需要bower install 就好了。bower install是可以直接从bower.json里面读出来的，其他项目成员就不需要写bower install jQuery了。 现在npm最常用于Node.Js模块，Npm是嵌套依赖树的关系，你应该知道删除npm模块，你不用rimraf node_modules模块，都不行，嵌套依赖就是，你依赖我，我依赖它，再依赖它。NPM嵌套依赖用在服务器上十分好，不用关心版本冲突问题等等。 Bower是专门为前端创建的，它对于依赖的管理是属于扁平化的。 现在一般项目里面，既有Bower和Node，因为前端还需要一些Gulp，Webpack这样的构建工具。 3.gulp3.1.gulp简介 链接： 官网 中文网-就是用来机械化的完成重复性质的工作 gulp的机制就是将重复的工作抽象成一个个任务 3.2.gulp准备工作 安装Node.js 安装 gulp 命令行工具 npm install -g gulp 初始化 gulp 项目 创建任务 - gulpfile.js]]></content>
+    <content type="text"><![CDATA[1.npm 就不扯了，天天用,npm 下载的依赖安装位置： 若是全局npm install -g 则放在C:\Users\fang\AppData\Roaming\npm\node_modules 是默认位置 若是在命令行输入npm install 没有-g,就是在当前目录npm init 会在当前目录下初始化package.json来管理npm信息 2.bower包管理工具，和npm一样。web应用程序依赖管理。安装：npm install -g bower,命令和npm差不多 bower init 清单文件定义bower.json。这类似于Node package.json或Ruby Gemfile。 一般来说bower install jQuery –save-dev ，这个操作可以往bower.json里面写入对应的模块，它可以实现不同之间的重复安装。其他项目成员，拿到项目之后，只需要bower install 就好了。bower install是可以直接从bower.json里面读出来的，其他项目成员就不需要写bower install jQuery了。 现在npm最常用于Node.Js模块，Npm是嵌套依赖树的关系，你应该知道删除npm模块，你不用rimraf node_modules模块，都不行，嵌套依赖就是，你依赖我，我依赖它，再依赖它。NPM嵌套依赖用在服务器上十分好，不用关心版本冲突问题等等。 Bower是专门为前端创建的，它对于依赖的管理是属于扁平化的。 现在一般项目里面，既有Bower和Node，因为前端还需要一些Gulp，Webpack这样的构建工具。 3.gulp3.1.gulp简介 链接： 官网 中文网-就是用来机械化的完成重复性质的工作 gulp的机制就是将重复的工作抽象成一个个任务 3.2.gulp准备工作 安装Node.js 安装 gulp 命令行工具 npm install -g gulp 初始化 gulp 项目 创建任务 - gulpfile.js 4.webpack]]></content>
   </entry>
   <entry>
     <title><![CDATA[vue的ui框架]]></title>

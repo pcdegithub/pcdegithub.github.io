@@ -22,8 +22,8 @@
 <meta name="theme-color" content="#222">
 <script>
     (function () {
-        if ('') {
-            if (prompt('请输入文章密码') !== '') {
+        if ('password') {
+            if (prompt('请输入文章密码') !== 'password') {
                 alert('密码错误！');
                 if (history.length === 1) {
                     location.replace("https://pcdegithub.github.io/"); // 这里替换成你的首页
@@ -620,7 +620,7 @@ new Vue({
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

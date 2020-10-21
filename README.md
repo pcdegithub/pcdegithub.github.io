@@ -6,9 +6,9 @@
 ---
 
 # 欢迎访问我的github博客
-博客园上写了两年多的技术博客。  
+博客园上写了三年多的技术博客。  
 
-最近重新搭起github博客,欢迎访问<font color="blue" face="微软雅黑">[github博客](//pcdegithub.github.io "欢迎")</font>
+两年前年前搭起github博客,欢迎访问<font color="blue" face="微软雅黑">[github博客](//pcdegithub.github.io "欢迎")</font>
 
 文章密码：password
 

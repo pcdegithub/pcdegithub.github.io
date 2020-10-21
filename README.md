@@ -1,14 +1,14 @@
 
 
 作者：方鹏程    
-日期：2019-5-1
+日期：2019-1-1
 
 ---
 
 # 欢迎访问我的github博客
 博客园上写了三年多的技术博客，大概500多篇。
 
-两年前搭起github博客,欢迎访问<font color="blue" face="微软雅黑">[github博客](//pcdegithub.github.io "欢迎")</font>
+最近搭起github博客,欢迎访问<font color="blue" face="微软雅黑">[github博客](//pcdegithub.github.io "欢迎")</font>
 
 文章密码：password
 
